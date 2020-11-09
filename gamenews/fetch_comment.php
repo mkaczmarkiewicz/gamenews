@@ -1,6 +1,8 @@
 <?php
 
-	$connect = new PDO('mysql:host=localhost;dbname=gamenews', 'root', '');
+	require_once "connect.php";
+
+	$connect = new PDO('mysql:host='.$host.';dbname='.$db_name, $db_user, $db_password);
 
 	$query = "SELECT comment.*, nick FROM comment, user WHERE user.id = comment.idUser AND idParent = '0' ORDER BY comment.id DESC";
 

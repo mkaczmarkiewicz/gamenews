@@ -3,7 +3,9 @@
 
 	include('header.php');
 
-	$connect = new PDO('mysql:host=localhost;dbname=gamenews', 'root', '');
+	require_once "connect.php";
+
+	$connect = new PDO('mysql:host='.$host.';dbname='.$db_name, $db_user, $db_password);
 
 	$userid = $_SESSION['id'];
 

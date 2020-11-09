@@ -10,7 +10,7 @@
 
 	require_once "connect.php";
 
-	$connect = new PDO('mysql:host=localhost;dbname=gamenews', 'root', '');
+	$connect = new PDO('mysql:host='.$host.';dbname='.$db_name, $db_user, $db_password);
 
 	$query = "SELECT * FROM post WHERE id = $choosenPost";
 	$statement = $connect->prepare($query);

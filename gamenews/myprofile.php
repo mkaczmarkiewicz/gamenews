@@ -26,7 +26,9 @@
 
 	$userid = $_SESSION['id'];
 
-	$connect = new PDO('mysql:host=localhost;dbname=gamenews', 'root', '');
+	require_once "connect.php";
+
+	$connect = new PDO('mysql:host='.$host.';dbname='.$db_name, $db_user, $db_password);
 
 	$query = "SELECT nick, avatar, description FROM user WHERE user.id = $userid";
 

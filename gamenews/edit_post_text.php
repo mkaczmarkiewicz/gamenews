@@ -40,7 +40,9 @@ if(isset($_POST['submit']))
 	}
 	else
 	{
-		$connect = new PDO('mysql:host=localhost;dbname=gamenews', 'root', '');
+		require_once "connect.php";
+
+		$connect = new PDO('mysql:host='.$host.';dbname='.$db_name, $db_user, $db_password);
 		$query = "UPDATE post SET type = '$type', title = '$title', intro = '$intro', content = '$content' WHERE id = $choosenPost";
 		$statement = $connect->prepare($query);
 		$statement->execute();
