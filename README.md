@@ -7,3 +7,17 @@ Jak zainstalować i uruchomić aplikację:
 5. Do strony głównej aplikacji przechodzimy za pomocą adresu localhost/gamenews/main.php
 
 Hasło dostępu do kont wszystkich użytkowników zarejestrowanych w bazie to "11111111".
+
+Przykładowe zrzuty ekranu:
+
+Strona główna
+
+![](/obrazy/gamenews1.png)
+
+Sekcja komentarzy pod postem
+
+![](/obrazy/gamenews2.png)
+
+Formularz rejestracji
+
+![](/obrazy/gamenews3.png)
